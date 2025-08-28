@@ -19,7 +19,8 @@ while(true){
 
     console.log("+------------MENU----------+")
     console.log("|1. Treinar Poder de Ataque|")
-    console.log("|2. Ves Status             |")
+    console.log("|2. Ver Status             |")
+    console.log("|3. Ves se há vida         |")
     console.log("|9. Sair                   |")
     console.log("+--------------------------+")
 
@@ -38,6 +39,14 @@ while(true){
     case 2:
         console.table(p);
         break;
+    
+    case 3:
+        //console.log(p.estaVivo()? "Está vivo(a)" : "Está morto(a)"); < - pode ser assim tbm
+        if(p.estaVivo()){
+            console.log(`${p.nome} está vivo(a)`);
+        }else {
+            console.log(`${p.nome} está morto(a)`);
+        }
     default:
         console.log("Opção inválida, tente novamente.");
         break;
