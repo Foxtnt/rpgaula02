@@ -1,3 +1,5 @@
+import { Util } from "./Util";
+
 export class Personagem{
     nome: string;
     classe: string;
@@ -22,8 +24,11 @@ export class Personagem{
         this.vidaMaxima = 0;
         this.poderAtaque = 0;
     }
+
+    // retorna nada mas soma 10% +3 //
     treinarPoderAtaque(): void {
-        this.poderAtaque += 3 + this.poderAtaque*1.1;
+        const incrementDoTreino: number = Util.gerarNumeroAleatorio(5,15);
+        this.poderAtaque += 3 + Math.round (Math.random()* 15) + this.poderAtaque*1.1;
     }
 
 }
